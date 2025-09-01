@@ -1,0 +1,99 @@
+“JavaScript runs code inside execution contexts and manages them with a call stack.
+
+When a file starts, JS creates the Global Execution Context (GEC). Every context is built in two steps:
+
+Creation phase
+
+Space is reserved for variables and functions (hoisting).
+
+function declarations are hoisted with their bodies.
+
+var is hoisted as undefined.
+
+let/const are created but stay in the Temporal Dead Zone (TDZ) until their line runs.
+
+The scope chain / outer environment is linked.
+
+The value of this is set (global object in non-strict, undefined in strict inside functions).
+
+Execution phase
+
+Code runs line by line. Variables get real values and functions are called.
+
+Every time I call a function, JS creates a Function Execution Context (FEC) and pushes it onto the call stack. When the function returns, that context is popped. If functions keep calling functions, the stack grows; if it grows too much, I get a Maximum call stack size exceeded error.
+
+Asynchronous tasks don’t run on the stack immediately; they complete elsewhere and are queued. The Event Loop puts their callbacks on the stack only when the stack is empty.
+
+So: contexts hold the environment; the call stack decides the order; hoisting & TDZ explain the timing.”
+
+Tiny whiteboard trace (use this example)
+console.log("G1");
+function a() {
+  console.log("A1");
+  b();
+  console.log("A2");
+}
+function b() { console.log("B"); }
+a();
+console.log("G2");
+
+
+Stack timeline (top → bottom):
+
+Start
+
+Push GEC
+
+Run console.log("G1") → prints G1
+
+Call a()
+
+Push FEC(a)
+
+Print A1
+
+Inside a, call b()
+
+Push FEC(b)
+
+Print B
+
+Pop FEC(b)
+
+Back in a
+
+Print A2
+
+Pop FEC(a)
+
+Back global
+
+Print G2
+
+End (GEC stays until program finishes)
+
+Output: G1 → A1 → B → A2 → G2
+
+Hoisting quick demo (1-liner proof)
+console.log(x); // undefined (var hoisted)
+var x = 10;
+
+try { console.log(y); } catch(e){ console.log("ReferenceError"); }
+let y = 20;
+
+f(); // works (function hoisted fully)
+function f(){ console.log("f"); }
+
+Key gotchas (say any two if asked)
+
+let/const have TDZ → accessing before initialization throws ReferenceError.
+
+In strict mode, this inside a plain function is undefined (not the global).
+
+Recursion without a base case → stack overflow.
+
+Async callbacks never “interrupt” running code; they wait until the stack is empty.
+
+One-liner wrap-up
+
+“Execution contexts provide the environment (variables, this, scope), and the call stack runs them in LIFO order; hoisting/TDZ explain why some identifiers exist before their lines, and async work only hits the stack when it’s empty.”
