@@ -12,6 +12,8 @@ Scopes → global, function, block scope, var vs let vs const.
 
 this keyword → how this changes in functions, objects, classes, arrow functions.
 
+garbage clloctor
+
 🔹 2. Asynchronous JS
 
 Event Loop → call stack, microtasks vs macrotasks, Node.js phases.
