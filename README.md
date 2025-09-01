@@ -113,3 +113,97 @@ Prototypes & Inheritance
 Array methods (map, reduce, etc.)
 
 ES6+ must-know features
+
+
+🔑 React Core Concepts
+1. Components
+
+Functional Components (most common now, with hooks).
+
+Class Components (legacy, but still asked).
+👉 Interviewer may ask: “How are class components different from functional components?”
+
+2. JSX
+
+JavaScript + XML → syntactic sugar for React.createElement.
+
+Must return one root element.
+
+3. Props & State
+
+Props → inputs to components, read-only.
+
+State → managed inside component, can change over time.
+👉 “What’s the difference between props and state?”
+
+4. Virtual DOM & Reconciliation
+
+React maintains a virtual DOM.
+
+Compares with real DOM using diffing algorithm.
+
+Updates only what changes → efficient rendering.
+
+5. Hooks (very common questions)
+
+useState → state in functional components.
+
+useEffect → side effects (API calls, subscriptions).
+
+useContext → global state via context.
+
+useMemo / useCallback → performance optimization.
+👉 Be ready to explain dependency array in useEffect.
+
+6. Component Lifecycle
+
+Class Components: componentDidMount, componentDidUpdate, componentWillUnmount.
+
+Functional Hooks Equivalent: useEffect with/without dependency array.
+
+7. Conditional Rendering
+
+Ternary (condition ? A : B), && operator, or separate functions.
+
+8. Lists & Keys
+
+Using .map() to render lists.
+
+Keys help React identify elements → important for reconciliation.
+
+9. Forms
+
+Controlled vs Uncontrolled components.
+👉 “Why prefer controlled components?”
+
+10. Lifting State Up
+
+Move state to the nearest common ancestor to share data.
+
+11. Context API
+
+Avoids prop drilling.
+
+createContext + useContext.
+
+12. React Router
+
+SPA navigation without page reload.
+
+<BrowserRouter>, <Routes>, <Route>.
+
+13. Performance Optimization
+
+Memoization: React.memo, useCallback, useMemo.
+
+Lazy Loading: React.lazy, Suspense.
+
+14. Error Boundaries
+
+Special components that catch JS errors in children.
+
+15. React + Async
+
+Fetching data → useEffect + fetch/Axios.
+
+Suspense for Data Fetching (new React feature).
