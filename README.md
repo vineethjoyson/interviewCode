@@ -207,3 +207,248 @@ Special components that catch JS errors in children.
 Fetching data → useEffect + fetch/Axios.
 
 Suspense for Data Fetching (new React feature).
+
+
+
+📌 Technical Round Interview Topics – SDE (Node.js + React)
+1. Core JavaScript & TypeScript
+
+Execution Context, Call Stack, Hoisting
+
+Scope: var, let, const
+
+Closures & Lexical Scope
+
+Higher-order functions & Callbacks
+
+Promises & async/await
+
+Event Loop, Microtasks vs Macrotasks
+
+this keyword behavior
+
+Prototypes & Inheritance
+
+ES6+ features: spread/rest, destructuring, template literals
+
+Modules: CommonJS vs ES Modules
+
+Error handling (try/catch, custom errors)
+
+TypeScript:
+
+Types vs Interfaces
+
+Generics
+
+Utility Types (Partial, Pick, Omit)
+
+Enums, Type Guards, Union & Intersection types
+
+Type Inference & any vs unknown
+
+2. Node.js & Backend Development
+
+Node.js internals:
+
+Event-driven architecture
+
+Streams & Buffers
+
+Process vs Thread (Node.js is single-threaded but uses libuv thread pool)
+
+Cluster module
+
+File System (fs module)
+
+Child Processes & Worker Threads
+
+Asynchronous patterns: callbacks, promises, async/await
+
+REST API development:
+
+Express.js basics (middleware, routing)
+
+Authentication & Authorization (JWT, OAuth, sessions)
+
+Error handling & logging
+
+Rate limiting, throttling
+
+API design best practices (versioning, pagination, HATEOAS)
+
+GraphQL (queries, mutations, resolvers, schema design)
+
+WebSockets & real-time APIs
+
+Security:
+
+OWASP Top 10 for Node
+
+CSRF, XSS, SQL Injection
+
+CORS
+
+Helmet.js & best practices
+
+Performance:
+
+Caching (Redis, in-memory)
+
+Load balancing
+
+Compression (gzip, brotli)
+
+3. Databases
+
+SQL (Postgres, MySQL)
+
+Joins, indexes, transactions
+
+Query optimization
+
+NoSQL (MongoDB, DynamoDB)
+
+Document design
+
+Aggregation pipelines
+
+ACID vs BASE
+
+ORMs (Sequelize, TypeORM, Prisma, Mongoose)
+
+4. React & Frontend
+
+React fundamentals:
+
+Components (functional, class)
+
+JSX
+
+Props vs State
+
+Lifecycle methods
+
+Controlled vs Uncontrolled components
+
+React Hooks:
+
+useState, useEffect, useContext, useReducer, useRef
+
+Custom hooks
+
+Context API & global state
+
+State management:
+
+Redux Toolkit, Zustand, Recoil
+
+Performance optimization:
+
+Memoization (React.memo, useMemo, useCallback)
+
+Virtual DOM & Reconciliation
+
+Lazy loading (React.lazy, Suspense)
+
+Routing (React Router)
+
+Forms (Formik, React Hook Form)
+
+Testing: Jest, React Testing Library, Cypress
+
+Styling: CSS Modules, Styled Components, Tailwind
+
+Security (XSS, sanitization)
+
+Accessibility (ARIA, semantic HTML)
+
+5. System Design (SDE-level)
+
+REST vs GraphQL APIs
+
+Design an Authentication System (JWT, refresh tokens, OAuth)
+
+Design a Chat Application (WebSocket, scaling, persistence)
+
+Design a URL Shortener
+
+Design an E-commerce API
+
+Scalability concepts:
+
+Load balancers
+
+Horizontal vs Vertical scaling
+
+Database sharding & replication
+
+Caching strategies
+
+Event-driven architecture (Kafka, SQS, RabbitMQ)
+
+6. DevOps / Cloud (AWS focus)
+
+AWS Lambda, API Gateway
+
+DynamoDB vs RDS
+
+S3 (file storage, presigned URLs)
+
+ECS/EKS (containers & orchestration)
+
+CI/CD (GitHub Actions, CodePipeline)
+
+Infrastructure as Code (CDK, CloudFormation)
+
+Monitoring & Logging (CloudWatch, ELK stack)
+
+7. Data Structures & Algorithms (DSA)
+
+Arrays & Strings
+
+Sliding window, Two pointers
+
+Linked Lists
+
+Stacks & Queues
+
+HashMaps & Sets
+
+Trees & Graphs
+
+BFS, DFS
+
+Binary Search Trees
+
+Recursion & Backtracking
+
+Dynamic Programming (tabulation, memoization)
+
+Sorting & Searching
+
+Big-O notation (time & space complexity)
+
+8. Testing & Best Practices
+
+Unit testing (Jest, Mocha, Chai)
+
+Integration testing
+
+End-to-end testing (Cypress, Playwright)
+
+TDD / BDD concepts
+
+Code quality (ESLint, Prettier)
+
+Logging & Monitoring (Winston, Morgan, ELK, Datadog)
+
+9. Soft Skills / Problem-Solving
+
+Debugging strategies
+
+Code review practices
+
+Explaining trade-offs in design
+
+Communication of technical concepts
